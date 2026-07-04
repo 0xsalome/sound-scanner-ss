@@ -4,19 +4,19 @@
 
 [Live Demo](https://sound-scanner-nine.vercel.app/)
 
-Sound Scanner is an experimental mobile web field visualizer that uses a smartphone's live camera and microphone to render changes in surrounding light, form, and sound as point clouds, scan lines, contours, trails, noise, and cymatic-inspired patterns.
+Sound Scanner is an experimental field visualizer for the mobile web that uses a smartphone's live camera and microphone to render changes in surrounding light, form, and sound as point clouds, scan lines, contours, trails, noise, and ripple-like patterns.
 
-This app is not a scanner for accurately measuring physical space. Its purpose is to make environmental activity observable again: natural soundscapes, outdoor agricultural environments, satoyama landscapes, fields, woods, wind, water, insects, birds, work sounds, and machinery that would normally recede into the background.
+This app is not a scanner for accurately measuring physical space. Its purpose is to treat environmental activity as something that can be observed again: natural soundscapes, outdoor agricultural environments, satoyama landscapes, fields, woods, wind, water, insects, birds, work sounds, and machinery that would normally recede into the background.
 
-Microphone input passes through the Web Audio API's `AnalyserNode` and is analyzed as frequency data derived from an FFT, or Fast Fourier Transform. Volume, frequency-band energy, peak frequency, spectral centroid, and spectral flux are used to alter point-cloud depth and movement, point size and brightness, scan speed, noise and contour response, trails and shockwaves, and the selection and motion of cymatic-inspired particle patterns.
+Microphone input passes through the Web Audio API's `AnalyserNode` and is analyzed as frequency data derived from an FFT, or Fast Fourier Transform. Values including volume, frequency-band energy, peak frequency, spectral centroid, and spectral flux are used to alter point-cloud depth and movement, point size and brightness, scan speed, noise and contour response, trails, shockwaves, and particle motion.
 
 The app extracts brightness, color, saturation, local edges, and frame-to-frame motion from the camera feed. It combines these features with the audio analysis to create imagery that resembles depth or terrain.
 
-Sound Scanner is not a real LiDAR, sonar, calibrated frequency meter, or environmental measuring instrument. It does not use iPhone LiDAR, ARKit, WebXR Depth Sensing, or a cloud vision service. Its depth, frequency displays, and cymatic-inspired patterns are pseudo-visualizations based on video and audio processed on the device.
+Sound Scanner is not a real LiDAR, sonar, calibrated frequency meter, or environmental measuring instrument. It does not use iPhone LiDAR, ARKit, WebXR Depth Sensing, or a cloud vision service. Its depth, frequency displays, and ripple-like patterns are pseudo-visualizations based on video and audio processed on the device.
 
-Cymatic Plate mode is inspired by cymatics and Chladni figures, in which sound and vibration create patterns on material surfaces. It is not a physical simulation of a vibrating plate: material properties, boundary conditions, exciter placement, and calibrated resonant frequencies are not modeled. Instead, changes detected through FFT-derived audio analysis are translated into visual patterns resembling nodal lines, ripples, rings, fluctuations, and particle motion.
+Cymatic Plate mode is a particle-based expression inspired by cymatics and Chladni figures. It is not a physical simulation of a vibrating plate: material properties, boundary conditions, exciter placement, and calibrated resonant frequencies are not modeled. Instead, changes detected through FFT-derived audio analysis are translated into visual patterns resembling nodal lines, ripples, rings, fluctuations, and particle motion.
 
-Sound Scanner does not aim to measure sound as an exact value. Its goal is to visualize relationships between sound, light, form, and movement in real time as a prompt for experimental field recording and environmental observation.
+Sound Scanner does not aim to measure sound as an exact value. Its goal is to visualize relationships between sound, light, form, and movement in real time, providing cues for experimental field recording and environmental observation.
 
 ## Features
 
