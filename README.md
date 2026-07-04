@@ -151,6 +151,10 @@ The default mode. This keeps the live camera RGB as the primary visual source an
 
 ### Frequency Scan
 
+<p align="center">
+  <img src="assets/readme/IMG_9305.jpg" alt="Frequency Scan mode" width="480">
+</p>
+
 An audio-forward scan mode for music environments. It still uses the camera point cloud, but sound analysis becomes more visible:
 
 - bass pushes the point field forward and creates heavy pulses
@@ -190,6 +194,11 @@ A contour-observation mode. The app computes luminance and a lightweight Sobel-s
 This mode is meant to feel closer to a sketch, map, or field diagram than a camera filter.
 
 ### Cymatic Plate
+
+<p align="center">
+  <img src="assets/readme/IMG_9302.jpg" alt="Cymatic Plate mode particle pattern" width="720">
+  <img src="assets/readme/IMG_9303.jpg" alt="Cymatic Plate mode ripple pattern" width="720">
+</p>
 
 A particle-field mode inspired by cymatics and Chladni figures. FFT-derived frequency energy selects and excites mathematical nodal patterns, while bass, mids, highs, peaks, and spectral centroid influence particle motion and pattern transitions.
 
