@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.pnpm-store/
+.DS_Store
+.env
+.env.*
+!.env.example
+.vercel/
+*.log
+
+# Local recordings and repair workspace
+local-video-repair/
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.webm

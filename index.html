@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#020407" />
+    <link rel="icon" type="image/png" sizes="1024x1024" href="./assets/icons/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/icons/favicon.png" />
+    <title>Sound Scanner</title>
+  </head>
+  <body>
+    <main id="app">
+      <section id="start-screen" class="start-screen" aria-labelledby="app-title">
+        <canvas id="entrance-grain" class="entrance-grain" aria-hidden="true"></canvas>
+        <div class="start-copy">
+          <h1 id="app-title">SOUND SCANNER</h1>
+          <p class="kicker">field audio visual</p>
+        </div>
+        <button id="start-button" class="start-button" type="button">Start</button>
+        <nav class="project-links" aria-label="Project links">
+          <a
+            href="https://github.com/0xsalome/sound-scanner-oss"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Source</a>
+          <span aria-hidden="true">/</span>
+          <a
+            href="https://github.com/0xsalome/sound-scanner-oss/blob/main/THIRD_PARTY_NOTICES.md"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Licenses</a>
+        </nav>
+      </section>
+
+      <canvas id="webgl-canvas" class="webgl-canvas" aria-label="Sound Scanner visualizer"></canvas>
+
+      <aside id="frequency-monitor" class="frequency-monitor" aria-live="polite" aria-label="Frequency monitor">
+        <div class="frequency-monitor__row">
+          <span>ピーク</span>
+          <span id="freq-peak">-- Hz</span>
+        </div>
+        <div class="frequency-monitor__row">
+          <span>重心</span>
+          <span id="freq-centroid">-- Hz</span>
+        </div>
+        <div class="frequency-monitor__row">
+          <span>変動</span>
+          <span id="freq-flux">0%</span>
+        </div>
+        <div class="frequency-monitor__row">
+          <span>低域</span>
+          <span id="freq-bass">░░░░░░</span>
+        </div>
+        <div class="frequency-monitor__row">
+          <span>中域</span>
+          <span id="freq-mid">░░░░░░</span>
+        </div>
+        <div class="frequency-monitor__row">
+          <span>高域</span>
+          <span id="freq-high">░░░░░░</span>
+        </div>
+        <div id="freq-status" class="frequency-monitor__status"></div>
+      </aside>
+
+      <aside id="cymatic-debug" class="cymatic-debug" aria-live="polite" aria-label="Cymatic debug monitor">
+        <div class="cymatic-debug__title">cymatics mode</div>
+        <div>peak <span id="cym-peak">-- Hz</span></div>
+        <div>mode <span id="cym-mode">-- Hz / n- m-</span></div>
+        <div>resonance <span id="cym-resonance">0.000</span></div>
+      </aside>
+
+      <div id="hud" class="hud is-hidden" aria-live="polite">
+        <div class="hud-row">
+          <span class="hud-label">SOUND SCANNER</span>
+          <span id="mode-label" class="hud-value">MODE: POINT CLOUD</span>
+        </div>
+        <div id="mode-selector" class="mode-selector" aria-label="Select scan mode">
+          <button class="mode-option is-selected" type="button" data-mode="0" aria-pressed="true">
+            <span class="mode-glyph point-glyph" aria-hidden="true"></span>
+            <span>POINT</span>
+          </button>
+          <button class="mode-option" type="button" data-mode="1" aria-pressed="false">
+            <span class="mode-glyph freq-glyph" aria-hidden="true"></span>
+            <span>FREQ</span>
+          </button>
+          <button class="mode-option" type="button" data-mode="2" aria-pressed="false">
+            <span class="mode-glyph line-glyph" aria-hidden="true"></span>
+            <span>LINE</span>
+          </button>
+          <button class="mode-option" type="button" data-mode="3" aria-pressed="false">
+            <span class="mode-glyph edge-glyph" aria-hidden="true"></span>
+            <span>CYMATIC</span>
+          </button>
+        </div>
+        <div class="action-buttons">
+          <button id="palette-button" class="palette-button" type="button">COLOR: REAL</button>
+          <button id="record-button" class="record-button" type="button" aria-pressed="false">REC</button>
+          <button id="stop-button" class="stop-button" type="button">STOP</button>
+        </div>
+      </div>
+
+      <div id="status" class="status" role="status"></div>
+      <div id="mode-flash" class="mode-flash is-hidden" aria-hidden="true">POINT CLOUD</div>
+      <pre id="debug-panel" class="debug-panel is-hidden" aria-live="polite"></pre>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
