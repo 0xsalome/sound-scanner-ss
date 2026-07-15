@@ -35,4 +35,9 @@ jobs:
         run: pnpm build
 
       - name: Audit dependencies
+        # Temporarily non-blocking: npm retired the legacy audit API (HTTP 410
+        # since 2026-07-15) and no released pnpm version uses the new bulk
+        # advisory endpoint yet. Remove continue-on-error once the fix ships.
+        # https://github.com/pnpm/pnpm/issues/11265
+        continue-on-error: true
         run: pnpm audit --audit-level high
